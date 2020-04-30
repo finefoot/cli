@@ -204,6 +204,11 @@ connects a bridge network to it to provide external connectivity. If you want
 to create an externally isolated `overlay` network, you can specify the
 `--internal` option.
 
+The `--internal` option can also be used to prevent external connections for
+networks with the `bridge` driver. For example, the container won't be able to
+access the Internet directly. Only connections to containers in the same
+network and to the Docker host itself are possible.
+
 ### Network ingress mode
 
 You can create the network which will be used to provide the routing-mesh in the
